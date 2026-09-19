@@ -31,8 +31,8 @@ android {
         applicationId = "com.gameitstudio.dwbookmarkapp"
         minSdk = 24
         targetSdk = 36
-        versionCode = 8
-        versionName = "1.0.6"
+        versionCode = 9
+        versionName = "1.0.8"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -58,14 +58,22 @@ android {
         release {
             // AdMob 콘솔에서 발급받은 실제 상단 배너 광고 단위 ID.
             // AndroidManifest 의 APPLICATION_ID(물결 '~')와는 다른 값이므로 혼동하지 말 것.
-            resValue("string", "admob_banner_unit_id", "ca-app-pub-4364320147278105/6094390818")
+            // -PuseTestAds=true 로 빌드하면 난독화된 릴리스 빌드를 테스트 광고로 기기 검증할 수 있다.
+            val useTestAds = (project.findProperty("useTestAds") as String?)?.toBoolean() == true
+            resValue(
+                "string", "admob_banner_unit_id",
+                if (useTestAds) "ca-app-pub-3940256099942544/9214589741"
+                else "ca-app-pub-4364320147278105/6094390818"
+            )
 
             // keystore.properties 가 있을 때만 서명한다.
             if (hasSigningConfig) {
                 signingConfig = signingConfigs.getByName("release")
             }
 
-            isMinifyEnabled = false
+            // R8 로 코드 축소·최적화·난독화 (Play 콘솔의 DEX 최적화 기준 충족)
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
