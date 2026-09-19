@@ -1,0 +1,26 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# 릴리스 서명 정보 (절대 커밋 금지)
+keystore.properties
+*.jks
+*.keystore
+
+# 빌드 산출물 · 설치 파일 (용량이 크고 소스로 재생성 가능)
+/app/release/
+.kotlin/
+*.apk
+*.aab

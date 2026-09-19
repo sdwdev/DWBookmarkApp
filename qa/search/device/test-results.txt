@@ -1,0 +1,8 @@
+
+com.gameitstudio.dwbookmarkapp.BookmarkSearchUiTest:..
+
+Time: 4.669
+
+OK (2 tests)
+
+

@@ -1,0 +1,7 @@
+allprojects { p ->
+    p.plugins.withId('com.android.application') {
+        def android = p.extensions.getByName('android')
+        android.buildTypes.getByName('debug').applicationIdSuffix = '.searchtest'
+        android.sourceSets.getByName('debug').manifest.srcFile(p.rootProject.file('qa/search/device/AndroidManifest.xml'))
+    }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 툴바 오버플로 메뉴. 세부 항목은 설정 화면(SettingsActivity)으로 옮겼다. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_title"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+
+    <item
+        android:id="@+id/action_new_folder"
+        android:title="@string/folder_new"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/menu_settings"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_select" android:title="다중 선택" app:showAsAction="never"/>
+    <item android:id="@+id/action_select_all" android:title="전체 선택/해제" app:showAsAction="never"/>
+    <item android:id="@+id/action_bulk_move" android:title="폴더 이동" app:showAsAction="never"/>
+    <item android:id="@+id/action_bulk_delete" android:title="선택 삭제" app:showAsAction="never"/>
+    <item android:id="@+id/action_bulk_share" android:title="선택 공유" app:showAsAction="never"/>
+    <item android:id="@+id/action_select_end" android:title="선택 완료" app:showAsAction="ifRoom"/>
+</menu>

@@ -1,0 +1,50 @@
+
+com.gameitstudio.dwbookmarkapp.BookmarkSourceUiTest:
+Error in sourceFiltersExistingAndNewLinksWithSearchFoldersAndSelection(com.gameitstudio.dwbookmarkapp.BookmarkSourceUiTest):
+androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
+	at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+	at java.lang.Thread.getStackTrace(Thread.java:2852)
+	at androidx.test.espresso.base.EspressoExceptionHandler.handleSafely(EspressoExceptionHandler.java:34)
+	at androidx.test.espresso.base.EspressoExceptionHandler.handleSafely(EspressoExceptionHandler.java:26)
+	at androidx.test.espresso.base.DefaultFailureHandler$TypedFailureHandler.handle(DefaultFailureHandler.java:158)
+	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:120)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:385)
+	at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:212)
+	at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:140)
+	at com.gameitstudio.dwbookmarkapp.BookmarkSourceUiTest$sourceFiltersExistingAndNewLinksWithSearchFoldersAndSelection$1.invokeSuspend$lambda$5$source(BookmarkSourceUiTest.kt:56)
+	at com.gameitstudio.dwbookmarkapp.BookmarkSourceUiTest$sourceFiltersExistingAndNewLinksWithSearchFoldersAndSelection$1.invokeSuspend(BookmarkSourceUiTest.kt:59)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-af216741fdf3b1278db4a75b3bc6c1f782e0abb7:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-af216741fdf3b1278db4a75b3bc6c1f782e0abb7:1)
+	at com.gameitstudio.dwbookmarkapp.BookmarkSourceUiTest.sourceFiltersExistingAndNewLinksWithSearchFoldersAndSelection(BookmarkSourceUiTest.kt:23)
+
+com.gameitstudio.dwbookmarkapp.BookmarkBulkTest:
+Error in selectionRecreateMoveCancelAndDelete(com.gameitstudio.dwbookmarkapp.BookmarkBulkTest):
+androidx.test.espresso.NoActivityResumedException: No activities in stage RESUMED. Did you forget to launch the activity. (test.getActivity() or similar)?
+	at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+	at java.lang.Thread.getStackTrace(Thread.java:2852)
+	at androidx.test.espresso.base.EspressoExceptionHandler.handleSafely(EspressoExceptionHandler.java:34)
+	at androidx.test.espresso.base.EspressoExceptionHandler.handleSafely(EspressoExceptionHandler.java:26)
+	at androidx.test.espresso.base.DefaultFailureHandler$TypedFailureHandler.handle(DefaultFailureHandler.java:158)
+	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:120)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:385)
+	at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:212)
+	at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:140)
+	at com.gameitstudio.dwbookmarkapp.BookmarkBulkTest$selectionRecreateMoveCancelAndDelete$1.invokeSuspend(BookmarkBulkTest.kt:73)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-af216741fdf3b1278db4a75b3bc6c1f782e0abb7:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-af216741fdf3b1278db4a75b3bc6c1f782e0abb7:1)
+	at com.gameitstudio.dwbookmarkapp.BookmarkBulkTest.selectionRecreateMoveCancelAndDelete(BookmarkBulkTest.kt:48)
+.
+com.gameitstudio.dwbookmarkapp.BookmarkSearchUiTest:INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0
