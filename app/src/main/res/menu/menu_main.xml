@@ -16,6 +16,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/action_link_list"
+        android:title="@string/link_list_title"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:title="@string/menu_settings"
         app:showAsAction="never" />

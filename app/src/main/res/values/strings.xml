@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 런처/설정 화면에 표시되는 이름. Play 스토어 등록명과 동일하게 유지한다. -->
-    <string name="app_name">DWBookMark</string>
+    <string name="app_name">줍줍</string>
     <string name="add_bookmark">북마크 추가</string>
     <string name="empty_message">저장된 북마크가 없습니다\n아래 + 버튼을 눌러 추가해보세요</string>
     <string name="url_hint">URL 입력 (https://...)</string>
@@ -60,4 +60,7 @@
     <string name="bookmark_title_required">제목을 입력해주세요</string>
     <string name="bookmark_save_failed">저장하지 못했습니다. 다시 시도해주세요.</string>
     <string name="source_empty">조건에 맞는 링크가 없습니다\n사이트 분류, 폴더 또는 검색어를 바꿔 보세요</string>
+    <string name="link_list_title">링크 목록</string>
+    <string name="link_list_empty">저장된 링크가 없습니다</string>
+    <string name="link_list_count">%1$d개</string>
 </resources>

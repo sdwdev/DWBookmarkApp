@@ -125,6 +125,14 @@ class BookmarkViewModel(application: Application, private val savedState: SavedS
         repository.updateDetails(id, title, note)
     }
 
+    /**
+     * 폴더 칩 누름. 이미 선택된 폴더를 다시 누르면 해제되어 전체 목록으로 돌아간다.
+     * ('전체'·'미분류' 칩을 없앴기 때문에 이 토글이 전체 보기로 가는 유일한 길이다)
+     */
+    fun toggleFolder(folderId: Long) {
+        selectFolder(if (_selectedFolderId.value == folderId) FOLDER_ALL else folderId)
+    }
+
     /** 폴더 칩 선택 */
     fun selectFolder(folderId: Long) {
         if (bulkBusy.value == true) return

@@ -122,10 +122,8 @@ class MainActivity : AppCompatActivity() {
         renderedFolders = folders
         binding.folderChips.removeAllViews()
 
-        addFolderChip(getString(R.string.folder_all), BookmarkViewModel.FOLDER_ALL, selectedId, null)
-        addFolderChip(
-            getString(R.string.folder_unfiled), BookmarkViewModel.FOLDER_UNFILED, selectedId, null
-        )
+        // 폴더가 하나도 없으면 빈 줄만 남으므로 통째로 숨긴다.
+        binding.folderScroll.isVisible = folders.isNotEmpty()
         folders.forEach { folder ->
             addFolderChip(folder.name, folder.id, selectedId, folder)
         }
@@ -141,7 +139,8 @@ class MainActivity : AppCompatActivity() {
             text = label
             isCheckable = true
             isChecked = id == selectedId
-            setOnClickListener { viewModel.selectFolder(id) }
+            // 선택된 칩을 다시 누르면 해제되어 전체 목록으로 돌아간다.
+            setOnClickListener { viewModel.toggleFolder(id) }
             if (folder != null) {
                 setOnLongClickListener {
                     showFolderManageDialog(folder)
@@ -406,6 +405,10 @@ class MainActivity : AppCompatActivity() {
         R.id.action_bulk_share -> { bulkShare(); true }
         R.id.action_new_folder -> {
             showCreateFolderDialog()
+            true
+        }
+        R.id.action_link_list -> {
+            startActivity(LinkListActivity.intent(this))
             true
         }
         R.id.action_settings -> {

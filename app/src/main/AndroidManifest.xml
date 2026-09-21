@@ -28,6 +28,13 @@
             </intent-filter>
         </activity>
 
+        <!-- 링크 목록 화면 -->
+        <activity
+            android:name=".ui.LinkListActivity"
+            android:exported="false"
+            android:label="@string/link_list_title"
+            android:parentActivityName=".ui.MainActivity" />
+
         <!-- 설정 화면 -->
         <activity
             android:name=".ui.SettingsActivity"
