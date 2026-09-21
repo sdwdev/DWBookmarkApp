@@ -290,7 +290,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun setupToolbar() {
         setSupportActionBar(binding.toolbar)
-        supportActionBar?.title = "내 북마크"
+        supportActionBar?.title = getString(R.string.app_name)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -341,7 +341,7 @@ class MainActivity : AppCompatActivity() {
     private fun refreshSelection() {
         val active = viewModel.selecting.value == true
         bookmarkAdapter.setSelection(active, (viewModel.selectedIds.value ?: longArrayOf()).toSet())
-        supportActionBar?.title = if (active) "${(viewModel.selectedIds.value ?: longArrayOf()).size}개 선택" else "내 북마크"
+        supportActionBar?.title = if (active) "${(viewModel.selectedIds.value ?: longArrayOf()).size}개 선택" else getString(R.string.app_name)
         binding.fabAdd.isVisible = !active
         binding.folderChips.isEnabled = viewModel.bulkBusy.value != true
         if (binding.toolbar.menu.size() > 0) onPrepareOptionsMenu(binding.toolbar.menu)
